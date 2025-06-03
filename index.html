@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - SAE23 Gestion des Capteurs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>SAE23 - Gestion des données de capteurs</h1>
+        <p class="subtitle">Projet universitaire pour la gestion des mesures environnementales</p>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Bienvenue sur la plateforme SAE23</h2>
+            <p>Ce site permet de consulter et gérer les données de capteurs (température, humidité, CO2) collectées dans deux bâtiments. Optimisé pour le <strong>Fairphone 3+</strong>, il respecte les principes d'écoconception pour une faible consommation énergétique.</p>
+        </section>
+        <section class="login-container">
+            <h2>Connexion</h2>
+            <form id="login-form" action="php/login.php" method="POST">
+                <label for="username">Identifiant :</label>
+                <input type="text" id="username" name="username" required placeholder="Entrez votre identifiant">
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required placeholder="Entrez votre mot de passe">
+                <button type="submit">Se connecter</button>
+                <?php if (isset($_GET['error'])): ?>
+                    <p class="error"><?php echo htmlspecialchars($_GET['error']); ?></p>
+                <?php endif; ?>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 SAE23 Team (VIGER, TEYSSEDRE, PORTET, GAUTIER) - IUT de Blagnac</p>
+        <p>Projet réalisé dans le cadre du département Réseaux et Télécommunications</p>
+    </footer>
+</body>
+</html>
