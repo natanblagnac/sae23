@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - SAE23</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SAE23 - Administration</h1>
+    </header>
+</body>
+
+
 <?php
 $creation_date = strtotime('2025-05-30');
 $days_to_destroy = 370;
